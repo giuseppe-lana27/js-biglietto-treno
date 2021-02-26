@@ -14,14 +14,17 @@ var prezzo = 0.21;
 var prezzoTotale = km * prezzo;
 // 4. Calcolo sconto
 var prezzoScontato;
+var totaleScontato;
 if (eta < 18){
   prezzoScontato = ((prezzoTotale * 20) / 100);
-  document.getElementById('prezzo').innerHTML = prezzoScontato + " &#x20AC;";
-  document.getElementById('sconto').innerHTML = "E' stato applicato uno sconto del 20%";
+  totaleScontato = prezzoTotale - prezzoScontato;
+  document.getElementById('prezzo').innerHTML = totaleScontato + " &#x20AC;";
+  document.getElementById('sconto').innerHTML = "E' stato applicato uno sconto del 20% pari a " + prezzoScontato + " &#x20AC;";
 } else if (eta >= 65) {
   prezzoScontato = ((prezzoTotale * 40) / 100);
-  document.getElementById('prezzo').innerHTML = prezzoScontato + " &#x20AC;";
-  document.getElementById('sconto').innerHTML = "E' stato applicato uno sconto del 40%";
+  totaleScontato = prezzoTotale - prezzoScontato;
+  document.getElementById('prezzo').innerHTML = totaleScontato + " &#x20AC;";
+  document.getElementById('sconto').innerHTML = "E' stato applicato uno sconto del 40% pari a " + prezzoScontato + " &#x20AC;";
 } else {
   document.getElementById('prezzo').innerHTML = prezzoTotale + " &#x20AC;"
   document.getElementById('sconto').innerHTML = "Non è stato applicato nessuno sconto";
