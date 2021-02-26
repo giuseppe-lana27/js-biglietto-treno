@@ -3,3 +3,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+.biglietto{
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #FFEBCD;
+  padding: 20px;
+}
+.logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.logo img{
+  width: 150px;
+  border-radius: 20px;
+}
+.company{
+  color: #0cd977;
+  font-size: 35px;
+}
+.percorso{
+  margin: 20px 0;
+}
+#kmtotali{
+  font-size: 18px;
+}
+.costo_totale{
+  margin-top: 25px;
+}
+#prezzo{
+  margin: 15px 0;
+}
+.saluti{
+  margin-top: 40px;
+}
