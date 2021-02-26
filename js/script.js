@@ -1,8 +1,14 @@
 // 1. Inserimento numero di km da percorrere
 var km = parseInt(prompt("Inserisci numero di Km da percorrere"));
+if ( isNaN(km) ) {
+  km = parseInt(prompt("Devi inserire il valore numererico di Km da percorrere"));
+}
 document.getElementById('kmtotali').innerHTML = km + " KM";
 // 2. Inserimento eta' viaggiatore
 var eta = parseInt(prompt("Inserisci la tua eta'"));
+if ( isNaN(eta) ) {
+  eta = parseInt(prompt("Inserisci la tua eta' con valore numerico"));
+}
 // 3. Calcolo prezzo biglietto
 var prezzo = 0.21;
 var prezzoTotale = km * prezzo;
@@ -19,5 +25,4 @@ if (eta < 18){
 } else {
   document.getElementById('prezzo').innerHTML = prezzoTotale + " &#x20AC;"
   document.getElementById('sconto').innerHTML = "Non è stato applicato nessuno sconto";
-
 }
